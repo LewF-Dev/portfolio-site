@@ -6,45 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto&display=swap"
-        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/27cde3202d.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Portfolio</title>
 </head>
 
-<body class="background-color-black text-color-light">
-    <img src="" alt="" id="background-img">
+<body class="text-color-light">
     <header>
-        <div class="logo">Lewis Freeman</div>
-        <nav id="navbar">
-            <a href="#">Home</a>
-            <a href="#">Skills</a>
-            <a href="#">Education</a>
-            <a href="#">Projects</a>
-        </nav>
+        <div class="navbar-container">
+            <div class="solid-circle">
+                <a href="index.html">
+                    <i class="fa-solid fa-house solid-circle favicon-larger"></i>
+                </a>
+            </div>
+            <nav id="navbar">
+                <a href="#">Home</a>
+                <a href="#">Skills</a>
+                <a href="#">Education</a>
+                <a href="#">Projects</a>
+            </nav>
+        </div>
     </header>
+
     <main>
-        <h3 class="font-montserrat">About Me</h3>
-        <p class="font-open-sans">
-            I'm a Junior Software Developer with a Certification in Full Stack Software
-            Development from Code Institute.
-            Proficient in HTML, CSS, JavaScript, and Python, with a strong focus on creating efficient, clean code.
-            I have hands-on experience with front-end and back-end technologies, including RESTful APIs, responsive
-            design, and database management.
-            I thrive in collaborative environments, effectively applying problem-solving skills and strong communication
-            to deliver high-quality projects.
-            I'm eager to grow as part of a dynamic development team!
-        </p>
+        <section id="hero">
+            <div class="intro">
+                <img src="./images/portfolio-site-red-coder-image.png" alt="Personal Image" id="profile-img">
+                <h1 class="jumbotron">Hi, I'm <span class="text-red">Lewis</span></h1>
+                <br>
+                <h1 class="jumbotron">I am proficient in ********</h1>
+                <br>
+                <button class="hire-button"> <a href="">Hire Me</a></button>
+            </div>
+        </section>
 
-        <h2>Projects</h2>
-        <h4 id="project-card">Task Manager Web App</h4>
-        <h4 id="project-card">Something Cooler!</h4>
-        <h4 id="Project-card">Something Ridiculously Cool...</h4>
-        <br>
+        <section id="about">
+            <h2 class="font-montserrat text-red">About Me</h2>
+            <p>
+                I'm a Junior Software Developer with a Certification in Full Stack Software
+                Development from Code Institute. Proficient in HTML, CSS, JavaScript, and Python, with a strong focus on
+                creating efficient, clean code. I have hands-on experience with front-end and back-end technologies,
+                including RESTful APIs, responsive design, and database management. I thrive in collaborative
+                environments, effectively applying problem-solving skills and strong communication to deliver
+                high-quality projects. I'm eager to grow as part of a dynamic development team!
+            </p>
+        </section>
     </main>
-    <footer>
 
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/lewis-freeman-89230a310/" target="_blank">
+                <i class="fa-brands fa-linkedin fa-2x"></i>
+            </a>
+            <a href="https://github.com/LewF-Dev" target="_blank">
+                <i class="fa-brands fa-github fa-2x"></i>
+            </a>
+        </div>
     </footer>
 </body>
 
