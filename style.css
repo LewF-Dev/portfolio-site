@@ -12,6 +12,7 @@ body {
     color: aliceblue;
     line-height: 1.6;
     background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('./images/black-background-texture.png') no-repeat center center/cover;
+    padding: 30px 50px;
 }
 
 a {
@@ -25,6 +26,14 @@ a:hover {
 
 .jumbotron {
     font-size: 600%;
+}
+
+.large-text {
+    font-size: 480%;
+}
+
+.large-text {
+    font-size: 500%;
 }
 
 /* Navbar */
@@ -65,7 +74,7 @@ header {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 4rem 2rem;
+    padding: 5rem 2rem;
     background: rgba(0, 0, 0, 0);
     border-radius: 10px;
     margin: 0;
@@ -77,7 +86,7 @@ header {
     margin-bottom: 1rem;
     position: absolute;
     left: 4%;
-    top: 12%;
+    top: 16%;
 }
 
 h1 {
@@ -87,16 +96,15 @@ h1 {
 
 p {
     font-size: 1.2rem;
-    max-width: 800px;
 }
 
 .text-red {
-    color: #cf2b2b;
+    color: #a62121;
 }
 
 /* About Section */
 #about {
-    padding-left: 5%;
+    padding-left: 2%;
     text-align: center;
     width: 50%;
 }
@@ -116,13 +124,12 @@ p {
 
 /* Footer */
 footer {
-    background: rgba(0, 0, 0, 0.9);
-    padding: 1rem;
+    background: rgba(0, 0, 0, 0);
     text-align: center;
 }
 
 .intro {
-    margin-left: 40%;
+    margin-left: 37%;
 }
 
 .intro img {
@@ -150,19 +157,19 @@ br {
 }
 
 .hire-button {
-    background-color: #cf2b2b;
+    background-color: transparent;
     font-size: 1.5rem;
     font-weight: bold;
     padding: 8px 16px;
-    border: none;
     border-radius: 15px;
+    border: 2px solid #a62121;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: all 0,3s ease;
 }
 
 .hire-button a {
-    color: black;
+    color: #a62121;
 }
 
 .hire-button:hover {
@@ -186,6 +193,30 @@ br {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+.circle-border {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 45px; 
+    height: 45px; 
+    background-color: transparent; 
+    border-radius: 50%; 
+    border: 2px solid #a62121;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.circle-border:hover {
+    transform: scale(110%);
+    transition: ease 0.3s;
+    
+}
+
+.circle-border a i:hover {
+    transform: scale(113%);
+    transition: ease 0.3s;
+    color: #a62121;
+}
+
 .solid-circle:hover {
     transform: scale(110%);
     transition: ease 0.3s;
@@ -204,3 +235,106 @@ br {
 .favicon-larger {
     font-size: 120%;
 }
+
+
+.text-color-black {
+    color: black;
+}
+
+.typing-text {
+    font-weight: 600;
+    min-width: 280px;
+    position: relative;
+}
+
+.typing-text h1{
+    font-size: 400%;
+}
+
+.typing-text span {
+    position: relative;
+}
+
+.typing-text span::before {
+    content: "Web Developer"; /* Initial content */
+    color: #a62121; /* Adjust color */
+    animation: words 8s infinite; /* Apply animation */
+}
+
+.typing-text span::after {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background-color: #a62121;
+    animation: cursor 0.6s steps(2) infinite;
+    margin-left: 2px;
+}
+
+@keyframes cursor {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
+}
+
+@keyframes words {
+    0%, 20% {
+        content: "Python";
+    }
+    21%, 40% {
+        content: "JavaScript";
+    }
+    41%, 60% {
+        content: "HTML";
+    }
+    61%, 80% {
+        content: "CSS";
+    }
+    81%, 100% {
+        content: "Django";
+    }
+}
+
+@keyframes flash {
+    0%, 100% {
+        color: #ffffff; /* White color at start and end */
+        transform: scale(1); /* Normal size */
+    }
+    50% {
+        color: #cf2b2b; /* Red color at midpoint */
+        transform: scale(1.1); /* Slightly enlarged size */
+    }
+}
+
+@keyframes flash-hover {
+    0% {
+        color: #ffffff; /* Start with the current color */
+        transform: scale(1); /* Start with the current size */
+    }
+    100% {
+        color: #cf2b2b; /* Gradually change to red */
+        transform: scale(1.2); /* Gradually enlarge */
+    }
+}
+
+#github-button  {
+    display: inline-block;
+    position: relative;
+    right: -96%;
+    bottom: 96%;
+    text-align: center;
+    color: #ffffff; /* Initial color of the icon */
+    font-size: 2rem; /* Icon size */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+    animation: flash 1.5s infinite; /* Flashing animation */
+}
+
+#github-button:hover {
+    animation: flash-hover 0.3s forwards; /* Smoothly transition to enlarged, red state */
+    color: #a62121; /* Change color on hover */
+    transform: scale(1.2); /* Slightly enlarge on hover */
+}
+
