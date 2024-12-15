@@ -20,20 +20,25 @@ a {
     color: aliceblue;
 }
 
-a:hover {
-    color: #c71616;
-}
-
 .jumbotron {
     font-size: 600%;
 }
 
-.large-text {
-    font-size: 480%;
+a:hover {
+    color: #c71616;
 }
 
-.large-text {
+.heading{
+    font-size: 600%;
+    font-weight: 600;
     font-size: 500%;
+}
+
+.red-divider {
+    height: 2px;
+    width: 300px;
+    background-color: #a62121;
+    margin: 10px auto;
 }
 
 /* Navbar */
@@ -84,7 +89,7 @@ header {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 5rem 2rem;
+    padding: 7rem 2rem;
     background: rgba(0, 0, 0, 0);
     border-radius: 10px;
     margin: 0;
@@ -101,7 +106,6 @@ header {
 
 h1 {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
 }
 
 p {
@@ -168,9 +172,10 @@ br {
 
 .hire-button {
     background-color: transparent;
-    font-size: 1.5rem;
+    font-size: 3rem;
     font-weight: bold;
     padding: 8px 16px;
+    margin-top: 30px;
     border-radius: 15px;
     border: 2px solid #a62121;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.1);
