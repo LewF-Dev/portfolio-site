@@ -61,6 +61,16 @@ header {
     transition: color 0.3s ease-in-out;
 }
 
+#navbar a:hover {
+    color: #cf2b2b; /* Red color on hover */
+}
+
+#navbar a.active {
+    font-weight: bold;
+    color: #cf2b2b; /* Highlight active link in red */
+    border-bottom: 2px solid #cf2b2b; /* Add underline to active link */
+}
+
 #logo-img {
     height: 80px;
     width: 120px;
