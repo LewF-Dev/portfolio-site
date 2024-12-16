@@ -24,7 +24,7 @@ a {
     font-size: 600%;
 }
 .jumbotron-smaller {
-    font-size: 300%;
+    font-size: 250%;
 }
 
 .font-size-xxl {
@@ -39,30 +39,45 @@ a:hover {
     color: #c71616;
 }
 
-#skills-section {
+.skills-wrapper {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap; /* Allow sections to wrap to the next row */
+    justify-content: space-between; /* Space sections evenly */
+    align-items: stretch; /* Stretch sections to equal height */
+    gap: 20px; /* Add space between sections */
+    margin: 0 auto; /* Center the wrapper itself */
+    width: 90%; /* Adjust wrapper width as needed */
 }
 
+#skills-section {
+    display: flex;
+    flex-direction: column; /* Stack heading and items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    text-align: center; /* Align text to center */
+    flex: 0 0 40%; /* Allow each section to take up 40% width */
+    padding: 20px; /* Add padding for spacing */
+    box-sizing: border-box; /* Include padding in total width/height */
+    min-height: 50vh; /* Ensure height to center vertically */
+}
+
+
 .first-heading {
-    font-weight: 600;
-    font-size: 500%;
-    max-width: 50%;
+    font-weight: 500;
+    font-size: 450%;
     text-align: center;
     justify-content: center;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
+    white-space: nowrap; /* Prevents text from wrapping */
 }
 
 .heading {
-    font-weight: 600;
-    font-size: 500%;
-    max-width: 50%;
+    font-weight: 500;
+    font-size: 450%;
     text-align: center;
     justify-content: center;
-    margin-bottom: 60px;
-    margin-top: 60px;
+    margin-bottom: 40px;
+    margin-top: 20px;
 }
 
 .red-divider {
@@ -124,6 +139,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 80px;
 }
 
 #navbar {
@@ -184,7 +200,7 @@ p {
 }
 
 .text-red {
-    color: #a62121;
+    color: #cf2b2b;
 }
 
 /* About Section */
