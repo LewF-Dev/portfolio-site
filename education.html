@@ -9,26 +9,60 @@
     <script src="https://kit.fontawesome.com/27cde3202d.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Potrfolio Site</title>
+    <title>Portfolio Site - Education</title>
 </head>
 
 <body class="text-color-light">
+    <!-- Header Section -->
     <header>
         <div class="navbar-container">
             <a href="index.html">
                 <div class="circle-border">
                     <i class="fa-solid fa-house  favicon-larger"></i>
-
                 </div>
             </a>
             <nav id="navbar">
                 <a href="skills.html">Skills</a>
-                <a href="education.html">Education</a>
+                <a href="education.html" class="active">Education</a>
                 <a href="projects.html">Projects</a>
                 <a href="info.html">Information</a>
             </nav>
         </div>
+        <h1 class="jumbotron text-red">Education</h1>
+        <div class="red-divider"></div>
     </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="education-section">
+            <div class="education-card">
+                <h2 class="education-heading">Code Institute</h2>
+                <p class="education-subheading">Full Stack Software Development</p>
+                <p class="education-date">Graduated: 2023</p>
+                <p>
+                    Completed an intensive Full Stack Software Development program, covering front-end, back-end,
+                    RESTful APIs, and database management. Built several responsive, real-world projects using
+                    <span class="text-red">HTML</span>, <span class="text-red">CSS</span>, <span class="text-red">JavaScript</span>, and <span class="text-red">Python</span>.
+                </p>
+            </div>
+
+            <div class="education-card">
+                <h2 class="education-heading">Self-Taught Development</h2>
+                <p class="education-subheading">Ongoing Learning</p>
+                <p class="education-date">2021 - Present</p>
+                <p>
+                    Continuously expanding my knowledge through self-study and online platforms such as
+                    <span class="text-red">Udemy</span>, <span class="text-red">FreeCodeCamp</span>, and <span class="text-red">YouTube</span>. Topics include advanced JavaScript, React.js, and database optimization.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p class="footer-text">© 2024 Lewis | Full Stack Developer</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 
