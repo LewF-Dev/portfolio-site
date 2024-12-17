@@ -6,6 +6,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+main {
+    flex: 1;
+}
+
 body {
     background-size: cover;
     background-position: center;
@@ -13,6 +17,10 @@ body {
     line-height: 1.6;
     background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('./images/black-background-texture.png') no-repeat center center/cover;
     padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full viewport height */
+    margin: 0;
 }
 
 a {
@@ -22,7 +30,18 @@ a {
 
 .jumbotron {
     font-size: 600%;
+    display: inline-block; /* Keeps the heading and underline in line */
+    position: relative; /* Allows positioning the underline relative to the heading */
+    margin-bottom: 20px; /* Spacing below the heading */
 }
+
+.jumbotron-medium {
+    font-size: 500%;
+    display: inline-block; /* Keeps the heading and underline in line */
+    position: relative; /* Allows positioning the underline relative to the heading */
+    margin-bottom: 20px; /* Spacing below the heading */
+}
+
 .jumbotron-smaller {
     font-size: 250%;
 }
@@ -46,11 +65,10 @@ a:hover {
 .skills-wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
+    justify-content: space-evenly;
     gap: 20px;
-    margin: 0 auto;
-    width: 90%;
+    margin-top: 50px;
+    margin-bottom: 70px;
 }
 
 #skills-section {
@@ -86,9 +104,12 @@ a:hover {
 
 .red-divider {
     height: 2px;
-    width: 300px;
+    width: 50%;
     background-color: #a62121;
-    margin: 10px auto;
+    position: absolute; /* Position the underline relative to the heading */
+    bottom: -10px; /* Adjust distance from the heading */
+    left: 50%; /* Start underline from the middle */
+    transform: translateX(-50%); /* Center the underline */
 }
 
 .flex-container {
@@ -168,16 +189,17 @@ a:hover {
     text-align: center;
     color: #cf2b2b;
     font-size: 1rem;
-    margin-top: 2rem;
+    margin-top: 0rem;
 }
 
 /* Navbar */
 header {
     background: rgba(0, 0, 0, 0);
-    padding: 1rem 2rem 7rem 2rem;
+    padding: 1rem 2rem 4rem 2rem;
     position: relative;
     top: 0;
     z-index: 1000;
+    text-align: left;
 }
 
 .navbar-container {
@@ -224,15 +246,15 @@ header {
     padding: 0rem 0rem 0rem 2rem;
     background: rgba(0, 0, 0, 0);
     border-radius: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 #profile-img {
-    height: 450px;
+    height: 550px;
     border-radius: 50%;
     margin-bottom: 1rem;
     position: absolute;
-    left: 4%;
+    left: 7%;
     top: 16%;
 }
 
@@ -252,14 +274,12 @@ p {
 #about {
     padding-left: 2%;
     text-align: center;
-    width: 50%;
 }
 
 #about h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
     text-align: center;
-    justify-content: center;
 }
 
 #about p {
@@ -272,6 +292,7 @@ p {
 footer {
     background: rgba(0, 0, 0, 0);
     text-align: center;
+    margin-bottom: 0%;
 }
 
 .intro {
@@ -482,5 +503,155 @@ br {
     animation: flash-hover 0.3s forwards; /* Smoothly transition to enlarged, red state */
     color: #a62121; /* Change color on hover */
     transform: scale(1.2); /* Slightly enlarge on hover */
+}
+ /* Skills Page Styles */
+.skills-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.skills-block {
+    width: 40%;
+    text-align: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.skills-heading {
+    font-size: 2rem;
+    color: #cf2b2b;
+    margin-bottom: 10px;
+}
+
+.skills-divider {
+    width: 50px;
+    height: 2px;
+    background-color: #cf2b2b;
+    margin: 10px auto;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+/* Education Page Styles */
+.education-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.education-block {
+    width: 60%;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.education-block h2 {
+    font-size: 2rem;
+    color: #cf2b2b;
+}
+
+.education-block p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.education-date {
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Projects Page Styles */
+.projects-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.project-block {
+    width: 30%;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.project-block h2 {
+    font-size: 1.8rem;
+    color: #cf2b2b;
+}
+
+.project-block p {
+    margin: 10px 0 20px;
+}
+
+.project-btn a {
+    background: #cf2b2b;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.project-btn a:hover {
+    background: #a62121;
+}
+
+/* Info Page Styles */
+.info-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.info-block {
+    width: 60%;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.info-block h2 {
+    font-size: 2rem;
+    color: #cf2b2b;
+}
+
+.info-block a {
+    color: #cf2b2b;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.info-block a:hover {
+    color: #a62121;
 }
 

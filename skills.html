@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/27cde3202d.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Potrfolio Site</title>
+    <title>Skills</title>
 </head>
 
 <body class="text-color-light">
@@ -17,134 +17,76 @@
         <div class="navbar-container">
             <a href="index.html">
                 <div class="circle-border">
-                    <i class="fa-solid fa-house  favicon-larger"></i>
-
+                    <i class="fa-solid fa-house favicon-larger"></i>
                 </div>
             </a>
             <nav id="navbar">
-                <a href="skills.html">Skills</a>
+                <a href="skills.html" class="active">Skills</a>
                 <a href="education.html">Education</a>
                 <a href="projects.html">Projects</a>
                 <a href="info.html">Information</a>
             </nav>
         </div>
-            <h1 class="jumbotron text-red">Skillset</h1>
+        <h1 class="jumbotron-medium">Skillset
+            <div class="red-divider"></div>
+        </h1>
+        
     </header>
 
     <div class="skills-wrapper">
-        <section id="skills-section">
-            <div class="first-heading">
-                Version control
-                <div class="red-divider"></div>
-            </div>
-            <div class="flex-container">
-                <div class="list-item">
-                    <i class="fa-solid fa-circle-dot"></i>
-                    <p class="jumbotron-smaller font-weight-600">Heroku</p>
-                </div>
-                <div class="list-item">
-                    <i class="fa-solid fa-circle-dot"></i>
-                    <p class="jumbotron-smaller font-weight-600">Github</p>
-                </div>
-                <div class="list-item">
-                    <i class="fa-solid fa-circle-dot"></i>
-                    <p class="jumbotron-smaller font-weight-600">Git</p>
-                </div>
-            </div>
+        <!-- Section Block -->
+        <section class="skills-block">
+            <h2 class="skills-heading">Version Control</h2>
+            <div class="skills-divider"></div>
+            <ul class="skills-list">
+                <li>Heroku</li>
+                <li>GitHub</li>
+                <li>Git</li>
+            </ul>
         </section>
 
-        <section id="skills-section">
-            <div class="heading">
-                Frame Works
-                <div class="red-divider"></div>
-            </div>
-            <div class="flex-container">
-                <div class="list-item">
-                    <i class="fa-solid fa-circle-dot"></i>
-                    <p class="jumbotron-smaller font-weight-600">Flask</p>
-                </div>
-                <div class="list-item">
-                    <i class="fa-solid fa-circle-dot"></i>
-                    <p class="jumbotron-smaller font-weight-600">Django</p>
-                </div>
-                <div class="list-item">
-                    <i class="fa-solid fa-circle-dot"></i>
-                    <p class="jumbotron-smaller font-weight-600">Bootstrap</p>
-                </div>
-            </div>
+        <section class="skills-block">
+            <h2 class="skills-heading">Frameworks</h2>
+            <div class="skills-divider"></div>
+            <ul class="skills-list">
+                <li>Flask</li>
+                <li>Django</li>
+                <li>Bootstrap</li>
+            </ul>
         </section>
 
-        <section id="skills-section">
-            <div class="heading">
-                Languages
-                <div class="red-divider"></div>
-            </div>
-            <div class="flex-container">
-                <div class="list-item">
-                    <i class="fa-solid fa-circle-dot"></i>
-                    <p class="jumbotron-smaller font-weight-600">CSS</p>
-                </div>
-                <div class="list-item">
-                    <i class="fa-solid fa-circle-dot"></i>
-                    <p class="jumbotron-smaller font-weight-600">HTML</p>
-                </div>
-                <div class="list-item">
-                    <i class="fa-solid fa-circle-dot"></i>
-                    <p class="jumbotron-smaller font-weight-600">Python</p>
-                </div>
-                <div class="list-item">
-                    <i class="fa-solid fa-circle-dot"></i>
-                    <p class="jumbotron-smaller font-weight-600">Django</p>
-                </div>
-            </div>
+        <section class="skills-block">
+            <h2 class="skills-heading">Languages</h2>
+            <div class="skills-divider"></div>
+            <ul class="skills-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+            </ul>
         </section>
 
-        <section id="skills-section">
-            <div class="heading">
-                Databases
-                <div class="red-divider"></div>
-            </div>
-            <div class="flex-container">
-                <div class="list-item">
-                    <i class="fa-solid fa-circle-dot"></i>
-                    <p class="jumbotron-smaller font-weight-600">MySQL</p>
-                </div>
-                <div class="list-item">
-                    <i class="fa-solid fa-circle-dot"></i>
-                    <p class="jumbotron-smaller font-weight-600">MongoDB </p>
-                </div>
-                <div class="list-item">
-                    <i class="fa-solid fa-circle-dot"></i>
-                    <p class="jumbotron-smaller font-weight-600">PostgreSQL</p>
-                </div>
-                <div class="list-item">
-                    <i class="fa-solid fa-circle-dot"></i>
-                    <p class="jumbotron-smaller font-weight-600">SQL</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills-section">
-            <div class="heading">
-                Libraries
-                <div class="red-divider"></div>
-            </div>
-            <div class="flex-container">
-                <div class="list-item">
-                    <i class="fa-solid fa-circle-dot"></i>
-                    <p class="jumbotron-smaller font-weight-600">jQuery</p>
-                </div>
-                <div class="list-item">
-                    <i class="fa-solid fa-circle-dot"></i>
-                    <p class="jumbotron-smaller font-weight-600">React.js</p>
-                </div>
-            </div>
+        <section class="skills-block">
+            <h2 class="skills-heading">Databases</h2>
+            <div class="skills-divider"></div>
+            <ul class="skills-list">
+                <li>MySQL</li>
+                <li>MongoDB</li>
+                <li>PostgreSQL</li>
+            </ul>
         </section>
     </div>
 
-
-
-
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="footer-text">&copy; 2024 LewF-Dev. All Rights Reserved.</p>
+            <div class="footer-socials">
+                <a href="https://github.com/LewF-Dev" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:youremail@example.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 
