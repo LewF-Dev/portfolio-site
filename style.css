@@ -500,12 +500,13 @@ br {
 #github-button  {
     display: inline-block;
     position: relative;
-    right: -96%;
+    right: -48.7%;
     text-align: center;
     color: #ffffff; /* Initial color of the icon */
-    font-size: 2rem; /* Icon size */
+    font-size: 1.5rem; /* Icon size */
     transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
     animation: flash 1.5s infinite; /* Flashing animation */
+    margin-top: 20px;
 }
 
 #github-button:hover {
