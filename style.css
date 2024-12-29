@@ -256,12 +256,11 @@ header {
 }
 
 #profile-img {
-    height: 550px;
-    border-radius: 50%;
+    height: 500px;
     margin-bottom: 1rem;
     position: absolute;
     left: 7%;
-    top: 16%;
+    top: 15%;
 }
 
 h1 {
