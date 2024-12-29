@@ -617,6 +617,12 @@ br {
     margin: 10px 0 20px;
 }
 
+.project-btn {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
 .project-btn a {
     background: #cf2b2b;
     color: #fff;
@@ -628,7 +634,7 @@ br {
 }
 
 .project-btn a:hover {
-    background: #a62121;
+    background: #971e1e;
 }
 
 /* Info Page Styles */
