@@ -669,3 +669,41 @@ br {
     color: #a62121;
 }
 
+.hidden {
+    display: none;
+}
+
+.burger-icon {
+    all: unset;
+    background: none;
+    color: #a62121;
+    font-size: 200%;
+}
+
+#navbar ul {
+    all: inherit;
+}
+
+/* Style the list items */
+#navbar ul li {
+    all:inherit;
+}
+
+
+@media (max-width:2560px) {
+    .burger-icon {
+        display: none;
+    }
+}
+
+
+@media (max-width:768px) {
+
+    #navbar{
+        display: none;
+    }
+
+    .burger-icon {
+        display: block;
+    }
+}
