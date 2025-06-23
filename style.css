@@ -30,16 +30,22 @@ a {
 
 .jumbotron {
     font-size: 600%;
-    display: inline-block; /* Keeps the heading and underline in line */
-    position: relative; /* Allows positioning the underline relative to the heading */
-    margin-bottom: 20px; /* Spacing below the heading */
+    display: inline-block;
+    /* Keeps the heading and underline in line */
+    position: relative;
+    /* Allows positioning the underline relative to the heading */
+    margin-bottom: 20px;
+    /* Spacing below the heading */
 }
 
 .jumbotron-medium {
     font-size: 500%;
-    display: inline-block; /* Keeps the heading and underline in line */
-    position: relative; /* Allows positioning the underline relative to the heading */
-    margin-bottom: 20px; /* Spacing below the heading */
+    display: inline-block;
+    /* Keeps the heading and underline in line */
+    position: relative;
+    /* Allows positioning the underline relative to the heading */
+    margin-bottom: 20px;
+    /* Spacing below the heading */
 }
 
 .jumbotron-smaller {
@@ -73,14 +79,22 @@ a:hover {
 
 #skills-section {
     display: flex;
-    flex-direction: column; /* Stack heading and items vertically */
-    align-items: center; /* Center items horizontally */
-    justify-content: center; /* Center items vertically */
-    text-align: center; /* Align text to center */
-    flex: 0 0 40%; /* Allow each section to take up 40% width */
-    padding: 20px; /* Add padding for spacing */
-    box-sizing: border-box; /* Include padding in total width/height */
-    min-height: 50vh; /* Ensure height to center vertically */
+    flex-direction: column;
+    /* Stack heading and items vertically */
+    align-items: center;
+    /* Center items horizontally */
+    justify-content: center;
+    /* Center items vertically */
+    text-align: center;
+    /* Align text to center */
+    flex: 0 0 40%;
+    /* Allow each section to take up 40% width */
+    padding: 20px;
+    /* Add padding for spacing */
+    box-sizing: border-box;
+    /* Include padding in total width/height */
+    min-height: 50vh;
+    /* Ensure height to center vertically */
 }
 
 
@@ -90,7 +104,8 @@ a:hover {
     text-align: center;
     justify-content: center;
     margin-bottom: 20px;
-    white-space: nowrap; /* Prevents text from wrapping */
+    white-space: nowrap;
+    /* Prevents text from wrapping */
 }
 
 .heading {
@@ -106,34 +121,47 @@ a:hover {
     height: 2px;
     width: 50%;
     background-color: #a62121;
-    position: absolute; /* Position the underline relative to the heading */
-    bottom: -10px; /* Adjust distance from the heading */
-    left: 50%; /* Start underline from the middle */
-    transform: translateX(-50%); /* Center the underline */
+    position: absolute;
+    /* Position the underline relative to the heading */
+    bottom: -10px;
+    /* Adjust distance from the heading */
+    left: 50%;
+    /* Start underline from the middle */
+    transform: translateX(-50%);
+    /* Center the underline */
 }
 
 .flex-container {
-    display: flex; /* Enable flexbox */
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    justify-content: center; /* Center items horizontally */
-    gap: 1rem; /* Add spacing between items */
-    max-width: 60%; /* Limit container width */
-    margin: 0 auto; /* Center the container */
+    display: flex;
+    /* Enable flexbox */
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next line */
+    justify-content: center;
+    /* Center items horizontally */
+    gap: 1rem;
+    /* Add spacing between items */
+    max-width: 60%;
+    /* Limit container width */
+    margin: 0 auto;
+    /* Center the container */
 }
 
 .flex-container .list-item {
-    display: flex; /* Align bullet and text horizontally */
-    align-items: center; /* Align vertically */
-    gap: 0.5rem; /* Spacing between bullet and text */
+    display: flex;
+    /* Align bullet and text horizontally */
+    align-items: center;
+    /* Align vertically */
+    gap: 0.5rem;
+    /* Spacing between bullet and text */
 }
 
 
 
 .list-item {
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 8px; 
+    gap: 8px;
 }
 
 .list-item i {
@@ -223,7 +251,8 @@ header {
 }
 
 .navbar .nav-link:hover {
-    color: #cf2b2b !important; /* Matches your red hover style */
+    color: #cf2b2b !important;
+    /* Matches your red hover style */
     background: rgba(207, 43, 43, 0.1);
     border-radius: 5px;
 }
@@ -243,8 +272,10 @@ header {
 
 /* Dropdown menu */
 .dropdown-menu {
-    background: rgba(0, 0, 0, 0.9); /* Matches your site background */
-    border: none; /* Remove default borders */
+    background: rgba(0, 0, 0, 0.9);
+    /* Matches your site background */
+    border: none;
+    /* Remove default borders */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     margin-top: 10px;
@@ -276,7 +307,7 @@ header {
 #hero {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     text-align: center;
     padding: 0rem 0rem 0rem 2rem;
@@ -288,7 +319,7 @@ header {
 #profile-img {
     height: 500px;
     margin-bottom: 1rem;
-    position: absolute;
+    position: relative;
     left: 7%;
     top: 15%;
 }
@@ -334,7 +365,7 @@ footer {
 
 
 .intro {
-    margin-left: 37%;
+    margin-left: 10%;
 }
 
 .intro img {
@@ -371,7 +402,7 @@ br {
     border: 2px solid #a62121;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    transition: all 0,3s ease;
+    transition: all 0, 3s ease;
 }
 
 .hire-button a {
@@ -380,8 +411,8 @@ br {
 
 .hire-button:hover {
     background-color: #a62121;
-    transform:scale(110%);
-    transition: 0.3s ease; 
+    transform: scale(110%);
+    transition: 0.3s ease;
 }
 
 .hire-button:hover a {
@@ -389,24 +420,24 @@ br {
 }
 
 .solid-circle {
-    display: flex; 
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 45px; 
-    height: 45px; 
-    background-color: #cf2b2b; 
-    border-radius: 50%; 
+    width: 45px;
+    height: 45px;
+    background-color: #cf2b2b;
+    border-radius: 50%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .circle-border {
-    display: flex; 
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 45px; 
-    height: 45px; 
-    background-color: transparent; 
-    border-radius: 50%; 
+    width: 45px;
+    height: 45px;
+    background-color: transparent;
+    border-radius: 50%;
     border: 2px solid #a62121;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
@@ -414,7 +445,7 @@ br {
 .circle-border:hover {
     transform: scale(110%);
     transition: ease 0.3s;
-    
+
 }
 
 .circle-border a i:hover {
@@ -453,7 +484,7 @@ br {
     position: relative;
 }
 
-.typing-text h1{
+.typing-text h1 {
     font-size: 400%;
 }
 
@@ -462,9 +493,12 @@ br {
 }
 
 .typing-text span::before {
-    content: "Web Developer"; /* Initial content */
-    color: #a62121; /* Adjust color */
-    animation: words 8s infinite; /* Apply animation */
+    content: "Web Developer";
+    /* Initial content */
+    color: #a62121;
+    /* Adjust color */
+    animation: words 8s infinite;
+    /* Apply animation */
 }
 
 .typing-text span::after {
@@ -478,72 +512,106 @@ br {
 }
 
 @keyframes cursor {
-    0%, 50% {
+
+    0%,
+    50% {
         opacity: 1;
     }
-    51%, 100% {
+
+    51%,
+    100% {
         opacity: 0;
     }
 }
 
 @keyframes words {
-    0%, 20% {
+
+    0%,
+    20% {
         content: "Python";
     }
-    21%, 40% {
+
+    21%,
+    40% {
         content: "JavaScript";
     }
-    41%, 60% {
+
+    41%,
+    60% {
         content: "HTML";
     }
-    61%, 80% {
+
+    61%,
+    80% {
         content: "CSS";
     }
-    81%, 100% {
+
+    81%,
+    100% {
         content: "Django";
     }
 }
 
 @keyframes flash {
-    0%, 100% {
-        color: #ffffff; /* White color at start and end */
-        transform: scale(1); /* Normal size */
+
+    0%,
+    100% {
+        color: #ffffff;
+        /* White color at start and end */
+        transform: scale(1);
+        /* Normal size */
     }
+
     50% {
-        color: #cf2b2b; /* Red color at midpoint */
-        transform: scale(1.1); /* Slightly enlarged size */
+        color: #cf2b2b;
+        /* Red color at midpoint */
+        transform: scale(1.1);
+        /* Slightly enlarged size */
     }
 }
 
 @keyframes flash-hover {
     0% {
-        color: #ffffff; /* Start with the current color */
-        transform: scale(1); /* Start with the current size */
+        color: #ffffff;
+        /* Start with the current color */
+        transform: scale(1);
+        /* Start with the current size */
     }
+
     100% {
-        color: #cf2b2b; /* Gradually change to red */
-        transform: scale(1.2); /* Gradually enlarge */
+        color: #cf2b2b;
+        /* Gradually change to red */
+        transform: scale(1.2);
+        /* Gradually enlarge */
     }
 }
 
-#github-button  {
+#github-button {
     display: inline-block;
     position: relative;
     right: -48.7%;
     text-align: center;
-    color: #ffffff; /* Initial color of the icon */
-    font-size: 1.5rem; /* Icon size */
-    transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
-    animation: flash 1.5s infinite; /* Flashing animation */
+    color: #ffffff;
+    /* Initial color of the icon */
+    font-size: 1.5rem;
+    /* Icon size */
+    transition: all 0.3s ease-in-out;
+    /* Smooth transition for hover effects */
+    animation: flash 1.5s infinite;
+    /* Flashing animation */
     margin-top: 20px;
 }
 
 #github-button:hover {
-    animation: flash-hover 0.3s forwards; /* Smoothly transition to enlarged, red state */
-    color: #a62121; /* Change color on hover */
-    transform: scale(1.2); /* Slightly enlarge on hover */
+    animation: flash-hover 0.3s forwards;
+    /* Smoothly transition to enlarged, red state */
+    color: #a62121;
+    /* Change color on hover */
+    transform: scale(1.2);
+    /* Slightly enlarge on hover */
 }
- /* Skills Page Styles */
+
+/* Skills Page Styles */
 .skills-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -716,13 +784,27 @@ br {
 
 /* Style the list items */
 #navbar ul li {
-    all:inherit;
+    all: inherit;
 }
 
 
 @media (max-width:2560px) {
     .burger-icon {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    #profile-img {
+        height: 400px;
+        margin-bottom: 1rem;
+        position: relative;
+        left: 7%;
+        top: 15%;
+    }
+
+    .intro {
+        /* margin-left: 50%; */
     }
 }
 
@@ -733,7 +815,8 @@ br {
     }
 
     .navbar-collapse {
-        background: rgba(0, 0, 0, 0.8); /* Ensures the dropdown matches the style */
+        background: rgba(0, 0, 0, 0.8);
+        /* Ensures the dropdown matches the style */
         border-radius: 10px;
         padding: 10px 0;
     }
