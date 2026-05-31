@@ -14,7 +14,7 @@ export default function Hero() {
     const animate = () => {
       t += 0.008;
       const scale = 1 + Math.sin(t) * 0.08;
-      const opacity = 0.12 + Math.sin(t * 0.7) * 0.04;
+      const opacity = 0.55 + Math.sin(t * 0.7) * 0.15;
       el.style.transform = `scale(${scale})`;
       el.style.opacity = String(opacity);
       frame = requestAnimationFrame(animate);
@@ -31,7 +31,7 @@ export default function Hero() {
         pointerEvents: "none", position: "absolute", top: "-10%", left: "50%",
         transform: "translateX(-50%)",
         width: "80vw", height: "70vh",
-        background: "radial-gradient(ellipse at center, rgba(74,127,165,0.18) 0%, rgba(74,127,165,0.06) 40%, transparent 70%)",
+        background: "radial-gradient(ellipse at center, rgba(74,127,165,0.55) 0%, rgba(74,127,165,0.2) 40%, transparent 70%)",
         transition: "none",
         willChange: "transform, opacity",
       }} />
