@@ -96,7 +96,10 @@ export default function Work() {
 
       <AnimateIn delay={0.1}>
         <div onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)}>
-          <div style={{ borderRadius: "1.25rem", border: "1px solid rgba(255,255,255,0.07)", background: "#0d0d0f", overflow: "hidden" }}>
+          <div style={{ borderRadius: "1.25rem", border: "1px solid rgba(255,255,255,0.07)", background: "#0d0d0f", overflow: "hidden", transition: "border-color 0.3s ease, box-shadow 0.3s ease" }}
+            onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(74,127,165,0.25)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "0 8px 40px rgba(74,127,165,0.08)"; }}
+            onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.borderColor = "rgba(255,255,255,0.07)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "none"; }}
+          >
 
             {/* Screenshot */}
             <a

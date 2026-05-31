@@ -22,11 +22,12 @@ export default function Navigation() {
   return (
     <header style={{
       position: "fixed", top: 0, left: 0, right: 0, zIndex: 50,
-      transition: "background 0.4s ease, border-color 0.4s ease",
-      background: scrolled ? "rgba(10,10,12,0.92)" : "rgba(10,10,12,0.7)",
-      backdropFilter: "blur(20px)",
-      WebkitBackdropFilter: "blur(20px)",
-      borderBottom: scrolled ? "1px solid rgba(255,255,255,0.07)" : "1px solid transparent",
+      transition: "background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease",
+      background: scrolled ? "rgba(10,10,12,0.75)" : "rgba(10,10,12,0.4)",
+      backdropFilter: "blur(24px) saturate(180%)",
+      WebkitBackdropFilter: "blur(24px) saturate(180%)",
+      borderBottom: "1px solid rgba(255,255,255,0.07)",
+      boxShadow: scrolled ? "0 1px 40px rgba(0,0,0,0.4)" : "none",
     }}>
       <div style={{
         maxWidth: "90rem", margin: "0 auto",

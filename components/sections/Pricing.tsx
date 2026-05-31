@@ -59,7 +59,11 @@ export default function Pricing() {
               border: tier.highlighted ? "1px solid rgba(74,127,165,0.5)" : "1px solid rgba(255,255,255,0.06)",
               background: tier.highlighted ? "rgba(74,127,165,0.06)" : "#13131a",
               height: "100%",
-            }}>
+              transition: "transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease",
+            }}
+              onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(-4px)"; (e.currentTarget as HTMLDivElement).style.boxShadow = tier.highlighted ? "0 12px 40px rgba(74,127,165,0.2)" : "0 12px 40px rgba(0,0,0,0.3)"; }}
+              onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLDivElement).style.boxShadow = "none"; }}
+            >
               {tier.highlighted && (
                 <>
                   <div style={{ position: "absolute", top: 0, left: "2rem", right: "2rem", height: "1px", background: "linear-gradient(90deg, transparent, #4a7fa5, transparent)" }} />

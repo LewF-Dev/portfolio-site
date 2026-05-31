@@ -52,7 +52,11 @@ export default function Services() {
       <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "0", background: "rgba(255,255,255,0.06)", borderRadius: "1rem", overflow: "hidden", border: "1px solid rgba(255,255,255,0.06)" }}>
         {services.map((service, i) => (
           <AnimateIn key={service.title} delay={i * 0.08} style={{ borderRight: i % 3 !== 2 ? "1px solid rgba(255,255,255,0.06)" : "none", borderBottom: i < 3 ? "1px solid rgba(255,255,255,0.06)" : "none" }}>
-            <div style={{ background: "#0d0d0f", padding: "2rem", display: "flex", flexDirection: "column", gap: "1rem", height: "100%" }}>
+            <div
+              style={{ background: "#0d0d0f", padding: "2rem", display: "flex", flexDirection: "column", gap: "1rem", height: "100%", transition: "background 0.25s ease" }}
+              onMouseEnter={e => (e.currentTarget as HTMLDivElement).style.background = "#111118"}
+              onMouseLeave={e => (e.currentTarget as HTMLDivElement).style.background = "#0d0d0f"}
+            >
               <div style={{ width: "2.5rem", height: "2.5rem", borderRadius: "0.5rem", background: "rgba(74,127,165,0.1)", border: "1px solid rgba(74,127,165,0.2)", display: "flex", alignItems: "center", justifyContent: "center", color: "#4a7fa5", flexShrink: 0 }}>
                 {service.icon}
               </div>
