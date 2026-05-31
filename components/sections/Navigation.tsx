@@ -41,17 +41,17 @@ export default function Navigation() {
       }}>
 
         {/* Left: logo + nav links together */}
-        <div style={{ display: "flex", alignItems: "center", gap: "2.5rem" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "3rem" }}>
           <Link href="/" style={{ display: "flex", alignItems: "center", textDecoration: "none", flexShrink: 0 }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/mordax-labs-logo.png"
               alt="Mordax Labs"
-              style={{ height: "4rem", width: "auto", objectFit: "contain", display: "block" }}
+              style={{ height: "4.75rem", width: "auto", objectFit: "contain", display: "block" }}
             />
           </Link>
 
-          <nav style={{ display: "flex", alignItems: "center", gap: "0.25rem" }}>
+          <nav style={{ display: "flex", alignItems: "center", gap: "0.25rem", paddingTop: "10px" }}>
             {navLinks.map(link => {
               // Match /how-it-works#pricing as active when on /how-it-works
               const isActive = link.href === "/"
