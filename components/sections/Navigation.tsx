@@ -5,10 +5,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const breatheKeyframes = `
-@keyframes ctaBreathe {
-  0%   { box-shadow: 0 0 10px 2px rgba(212,168,75,0.35), 0 0 24px 4px rgba(184,146,42,0.2); background-position: 0% 50%; }
-  50%  { box-shadow: 0 0 18px 6px rgba(212,168,75,0.6), 0 0 40px 10px rgba(184,146,42,0.3); background-position: 100% 50%; }
-  100% { box-shadow: 0 0 10px 2px rgba(212,168,75,0.35), 0 0 24px 4px rgba(184,146,42,0.2); background-position: 0% 50%; }
+@keyframes ctaFlow {
+  0%   { background-position: 0% 0%;   box-shadow: 0 0 8px 2px rgba(212,168,75,0.2), 0 2px 16px rgba(184,146,42,0.12); }
+  25%  { background-position: 60% 40%; box-shadow: 0 0 12px 3px rgba(240,192,96,0.25), 0 2px 20px rgba(212,168,75,0.15); }
+  50%  { background-position: 100% 100%; box-shadow: 0 0 8px 2px rgba(212,168,75,0.2), 0 2px 16px rgba(184,146,42,0.12); }
+  75%  { background-position: 40% 60%; box-shadow: 0 0 14px 4px rgba(240,192,96,0.22), 0 2px 18px rgba(212,168,75,0.14); }
+  100% { background-position: 0% 0%;   box-shadow: 0 0 8px 2px rgba(212,168,75,0.2), 0 2px 16px rgba(184,146,42,0.12); }
 }
 `;
 
@@ -117,35 +119,50 @@ export default function Navigation() {
             alignItems: "center",
             gap: "0.5rem",
             padding: "0.65rem 1.5rem",
-            borderRadius: "0.5rem",
+            borderRadius: "0.6rem",
             fontSize: "0.8rem",
             fontWeight: 700,
-            letterSpacing: "0.04em",
+            letterSpacing: "0.05em",
             textDecoration: "none",
-            color: "#0d0d0f",
-            background: "linear-gradient(270deg, #f0c060, #d4a84b, #b8922a, #d4a84b, #f0c060)",
+            color: "#1a0e00",
+            // Glass base — translucent amber
+            background: "linear-gradient(135deg, rgba(240,192,80,0.82) 0%, rgba(212,148,30,0.75) 40%, rgba(240,180,60,0.80) 70%, rgba(212,168,75,0.78) 100%)",
             backgroundSize: "300% 300%",
-            animation: "ctaBreathe 3s ease-in-out infinite",
+            backdropFilter: "blur(12px) saturate(160%)",
+            WebkitBackdropFilter: "blur(12px) saturate(160%)",
+            // Layered border: bright top edge + subtle outer ring
+            border: "1px solid rgba(255,220,100,0.45)",
+            outline: "1px solid rgba(180,120,20,0.2)",
+            outlineOffset: "1px",
+            animation: "ctaFlow 8s ease-in-out infinite",
             marginRight: "-60px",
             position: "relative",
             overflow: "hidden",
           }}
         >
-          {/* Gloss overlay — top half highlight */}
+          {/* Top-half gloss — convex glass highlight */}
           <span style={{
             position: "absolute",
             top: 0, left: 0, right: 0,
-            height: "50%",
-            background: "linear-gradient(180deg, rgba(255,255,255,0.28) 0%, rgba(255,255,255,0.04) 100%)",
-            borderRadius: "0.5rem 0.5rem 0 0",
+            height: "52%",
+            background: "linear-gradient(180deg, rgba(255,255,255,0.32) 0%, rgba(255,255,255,0.06) 100%)",
+            borderRadius: "0.6rem 0.6rem 40% 40% / 0.6rem 0.6rem 20px 20px",
             pointerEvents: "none",
           }} />
-          {/* Gloss shimmer line */}
+          {/* Inner shimmer line just below top edge */}
           <span style={{
             position: "absolute",
-            top: "1px", left: "8%", right: "8%",
+            top: "1px", left: "12%", right: "12%",
             height: "1px",
-            background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent)",
+            background: "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.7) 40%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.7) 60%, transparent 100%)",
+            pointerEvents: "none",
+          }} />
+          {/* Bottom inner shadow — depth */}
+          <span style={{
+            position: "absolute",
+            bottom: 0, left: 0, right: 0,
+            height: "35%",
+            background: "linear-gradient(0deg, rgba(120,70,0,0.18) 0%, transparent 100%)",
             pointerEvents: "none",
           }} />
           <span style={{ position: "relative", zIndex: 1, display: "inline-flex", alignItems: "center", gap: "0.5rem" }}>
