@@ -77,7 +77,7 @@ export default function Hero() {
 
           <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginTop: "0.5rem", animation: "fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.85s both" }}>
             <a href="/contact"
-              style={{ background: "linear-gradient(135deg, #d4a84b 0%, #c9a84c 50%, #b8922a 100%)", color: "#0d0d0f", padding: "0.875rem 2rem", borderRadius: "0.5rem", fontSize: "0.9rem", fontWeight: 600, textDecoration: "none", boxShadow: "0 4px 16px rgba(201,168,76,0.3)", transition: "transform 0.2s ease, box-shadow 0.2s ease", display: "inline-block" }}
+              style={{ background: "linear-gradient(135deg, #e8b84b 0%, #d4a84b 25%, #c9a84c 50%, #d4a84b 75%, #e8b84b 100%)", backgroundSize: "300% 300%", animation: "ctaFlow 6s ease-in-out infinite", color: "#0d0d0f", padding: "0.875rem 2rem", borderRadius: "0.5rem", fontSize: "0.9rem", fontWeight: 600, textDecoration: "none", boxShadow: "0 4px 16px rgba(201,168,76,0.3)", transition: "transform 0.2s ease, box-shadow 0.2s ease", display: "inline-block" }}
               onMouseEnter={e => { (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(-2px)"; (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 8px 24px rgba(201,168,76,0.45)"; }}
               onMouseLeave={e => { (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(0)"; (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 4px 16px rgba(201,168,76,0.3)"; }}
             >
@@ -106,6 +106,11 @@ export default function Hero() {
         @keyframes glowPulse {
           from { opacity: 0.4; transform: scale(1); }
           to { opacity: 0.8; transform: scale(1.15); }
+        }
+        @keyframes ctaFlow {
+          0%   { background-position: 0% 50%; }
+          50%  { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
         }
       `}</style>
     </section>
