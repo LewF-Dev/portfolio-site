@@ -13,66 +13,108 @@ const navLinks = [
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState<string | null>(null);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    document.body.style.overflow = menuOpen ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
-  }, [menuOpen]);
-
   return (
-    <>
-      <header style={{
-        position: "fixed", top: 0, left: 0, right: 0, zIndex: 50,
-        background: "rgba(13,13,15,0.95)",
-        backdropFilter: "blur(12px)",
-        borderBottom: "1px solid rgba(255,255,255,0.06)",
+    <header style={{
+      position: "fixed", top: 0, left: 0, right: 0, zIndex: 50,
+      transition: "all 0.4s ease",
+      background: scrolled ? "rgba(10,10,12,0.85)" : "rgba(10,10,12,0.6)",
+      backdropFilter: "blur(20px)",
+      WebkitBackdropFilter: "blur(20px)",
+      borderBottom: scrolled ? "1px solid rgba(255,255,255,0.06)" : "1px solid transparent",
+    }}>
+      <div style={{
+        maxWidth: "90rem", margin: "0 auto",
+        padding: "0 2.5rem",
+        display: "grid",
+        gridTemplateColumns: "1fr auto 1fr",
+        alignItems: "center",
+        height: "5rem",
       }}>
-        <div style={{ maxWidth: "90rem", margin: "0 auto", padding: "0 2.5rem", display: "grid", gridTemplateColumns: "1fr auto 1fr", alignItems: "center", height: "5rem" }}>
 
-          {/* Logo — left */}
-          <Link href="#" style={{ display: "flex", alignItems: "center", textDecoration: "none", justifyContent: "flex-start" }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/mordax-labs-logo.png"
-              alt="Mordax Labs"
-              style={{ height: "3.5rem", width: "auto", objectFit: "contain", display: "block" }}
-            />
-          </Link>
+        {/* Logo */}
+        <Link href="#" style={{ display: "flex", alignItems: "center", textDecoration: "none", justifyContent: "flex-start" }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/mordax-labs-logo.png"
+            alt="Mordax Labs"
+            style={{ height: "3.5rem", width: "auto", objectFit: "contain", display: "block" }}
+          />
+        </Link>
 
-          {/* Nav links — centre */}
-          <nav style={{ display: "flex", alignItems: "center", gap: "0.25rem" }}>
-            {navLinks.map(link => (
-              <Link key={link.href} href={link.href} style={{ padding: "0.5rem 0.875rem", fontSize: "0.875rem", color: "#a0a0b0", textDecoration: "none", borderRadius: "0.375rem", transition: "color 0.2s" }}
-                onMouseEnter={e => (e.currentTarget.style.color = "#f0f0f0")}
-                onMouseLeave={e => (e.currentTarget.style.color = "#a0a0b0")}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-
-          {/* CTA — right */}
-          <div style={{ display: "flex", justifyContent: "flex-end" }}>
-            <Link href="#contact" style={{ background: "#c9a84c", color: "#0d0d0f", padding: "0.6rem 1.25rem", borderRadius: "0.5rem", fontSize: "0.875rem", fontWeight: 600, textDecoration: "none", transition: "background 0.2s" }}
-              onMouseEnter={e => (e.currentTarget.style.background = "#dfc278")}
-              onMouseLeave={e => (e.currentTarget.style.background = "#c9a84c")}
+        {/* Nav links */}
+        <nav style={{ display: "flex", alignItems: "center", gap: "0.125rem" }}>
+          {navLinks.map(link => (
+            <Link
+              key={link.href}
+              href={link.href}
+              style={{
+                position: "relative",
+                padding: "0.5rem 1rem",
+                fontSize: "0.8rem",
+                letterSpacing: "0.04em",
+                color: activeLink === link.href ? "#f0f0f0" : "#8a8a9a",
+                textDecoration: "none",
+                transition: "color 0.2s",
+                fontWeight: 400,
+              }}
+              onMouseEnter={e => {
+                setActiveLink(link.href);
+                (e.currentTarget as HTMLAnchorElement).style.color = "#f0f0f0";
+              }}
+              onMouseLeave={e => {
+                setActiveLink(null);
+                (e.currentTarget as HTMLAnchorElement).style.color = "#8a8a9a";
+              }}
             >
-              Start a Project
+              {link.label}
             </Link>
-          </div>
-        </div>
-      </header>
+          ))}
+        </nav>
 
-      {/* Mobile menu — hidden for now, desktop first */}
-    </>
+        {/* CTA */}
+        <div style={{ display: "flex", justifyContent: "flex-end", alignItems: "center" }}>
+          <Link
+            href="#contact"
+            style={{
+              position: "relative",
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "0.5rem",
+              padding: "0.6rem 1.4rem",
+              borderRadius: "0.5rem",
+              fontSize: "0.8rem",
+              fontWeight: 600,
+              letterSpacing: "0.03em",
+              textDecoration: "none",
+              color: "#0d0d0f",
+              background: "linear-gradient(135deg, #d4a84b 0%, #c9a84c 50%, #b8922a 100%)",
+              boxShadow: "0 1px 0 rgba(255,255,255,0.15) inset, 0 4px 12px rgba(201,168,76,0.25)",
+              transition: "all 0.2s ease",
+            }}
+            onMouseEnter={e => {
+              (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 1px 0 rgba(255,255,255,0.15) inset, 0 6px 20px rgba(201,168,76,0.4)";
+              (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(-1px)";
+            }}
+            onMouseLeave={e => {
+              (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 1px 0 rgba(255,255,255,0.15) inset, 0 4px 12px rgba(201,168,76,0.25)";
+              (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(0)";
+            }}
+          >
+            Start a Project
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </Link>
+        </div>
+      </div>
+    </header>
   );
 }
-
-
