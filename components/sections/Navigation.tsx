@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   { label: "Work", href: "/work" },
@@ -13,6 +14,7 @@ const navLinks = [
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -51,26 +53,50 @@ export default function Navigation() {
           </Link>
 
           <nav style={{ display: "flex", alignItems: "center", gap: "0.25rem" }}>
-            {navLinks.map(link => (
-              <Link
-                key={link.href}
-                href={link.href}
-                style={{
-                  padding: "0.45rem 0.9rem",
-                  fontSize: "0.8rem",
-                  letterSpacing: "0.03em",
-                  color: "#8a8a9a",
-                  textDecoration: "none",
-                  transition: "color 0.2s",
-                  fontWeight: 400,
-                  borderRadius: "0.375rem",
-                }}
-                onMouseEnter={e => (e.currentTarget as HTMLAnchorElement).style.color = "#f0f0f0"}
-                onMouseLeave={e => (e.currentTarget as HTMLAnchorElement).style.color = "#8a8a9a"}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map(link => {
+              // Match /how-it-works#pricing as active when on /how-it-works
+              const isActive = link.href === "/"
+                ? pathname === "/"
+                : pathname.startsWith(link.href.split("#")[0]);
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  style={{
+                    padding: "0.45rem 0.9rem",
+                    fontSize: "0.8rem",
+                    letterSpacing: "0.03em",
+                    color: isActive ? "#d4a84b" : "#8a8a9a",
+                    textDecoration: "none",
+                    fontWeight: isActive ? 600 : 400,
+                    borderRadius: "0.375rem",
+                    position: "relative",
+                    transition: "color 0.2s",
+                    textShadow: isActive ? "0 0 12px rgba(212,168,75,0.5)" : "none",
+                  }}
+                  onMouseEnter={e => {
+                    if (!isActive) (e.currentTarget as HTMLAnchorElement).style.color = "#f0f0f0";
+                  }}
+                  onMouseLeave={e => {
+                    if (!isActive) (e.currentTarget as HTMLAnchorElement).style.color = "#8a8a9a";
+                  }}
+                >
+                  {link.label}
+                  {isActive && (
+                    <span style={{
+                      position: "absolute",
+                      bottom: "-2px",
+                      left: "0.9rem",
+                      right: "0.9rem",
+                      height: "2px",
+                      borderRadius: "1px",
+                      background: "linear-gradient(90deg, #d4a84b, #b8922a)",
+                      boxShadow: "0 0 8px rgba(212,168,75,0.6)",
+                    }} />
+                  )}
+                </Link>
+              );
+            })}
           </nav>
         </div>
 

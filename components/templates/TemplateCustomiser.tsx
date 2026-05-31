@@ -52,6 +52,7 @@ export default function TemplateCustomiser() {
       background: "#0a0a0c",
       borderTop: "1px solid rgba(255,255,255,0.06)",
       borderBottom: "1px solid rgba(255,255,255,0.06)",
+      overflowX: "hidden",
     }}>
       <div style={{
         maxWidth: "1400px", margin: "0 auto",
@@ -69,9 +70,10 @@ export default function TemplateCustomiser() {
 
         <div style={{
           display: "grid",
-          gridTemplateColumns: "320px 1fr",
+          gridTemplateColumns: "minmax(0, 320px) minmax(0, 1fr)",
           gap: "2rem",
           alignItems: "start",
+          minWidth: 0,
         }}>
           {/* ── Control Panel ── */}
           <div style={{
