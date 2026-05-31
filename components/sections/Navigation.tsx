@@ -4,6 +4,14 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+const breatheKeyframes = `
+@keyframes ctaBreathe {
+  0%   { box-shadow: 0 0 10px 2px rgba(212,168,75,0.35), 0 0 24px 4px rgba(184,146,42,0.2); background-position: 0% 50%; }
+  50%  { box-shadow: 0 0 18px 6px rgba(212,168,75,0.6), 0 0 40px 10px rgba(184,146,42,0.3); background-position: 100% 50%; }
+  100% { box-shadow: 0 0 10px 2px rgba(212,168,75,0.35), 0 0 24px 4px rgba(184,146,42,0.2); background-position: 0% 50%; }
+}
+`;
+
 const navLinks = [
   { label: "Work", href: "/work" },
   { label: "Process", href: "/how-it-works" },
@@ -22,6 +30,8 @@ export default function Navigation() {
   }, []);
 
   return (
+    <>
+    <style>{breatheKeyframes}</style>
     <header style={{
       position: "fixed", top: 0, left: 0, right: 0, zIndex: 50,
       transition: "background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease",
@@ -106,32 +116,47 @@ export default function Navigation() {
             display: "inline-flex",
             alignItems: "center",
             gap: "0.5rem",
-            padding: "0.6rem 1.4rem",
+            padding: "0.65rem 1.5rem",
             borderRadius: "0.5rem",
             fontSize: "0.8rem",
-            fontWeight: 600,
-            letterSpacing: "0.03em",
+            fontWeight: 700,
+            letterSpacing: "0.04em",
             textDecoration: "none",
             color: "#0d0d0f",
-            background: "linear-gradient(135deg, #d4a84b 0%, #c9a84c 50%, #b8922a 100%)",
-            boxShadow: "0 1px 0 rgba(255,255,255,0.15) inset, 0 4px 12px rgba(201,168,76,0.25)",
-            transition: "box-shadow 0.2s ease, transform 0.2s ease",
-          }}
-          onMouseEnter={e => {
-            (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 1px 0 rgba(255,255,255,0.15) inset, 0 6px 20px rgba(201,168,76,0.4)";
-            (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(-1px)";
-          }}
-          onMouseLeave={e => {
-            (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 1px 0 rgba(255,255,255,0.15) inset, 0 4px 12px rgba(201,168,76,0.25)";
-            (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(0)";
+            background: "linear-gradient(270deg, #f0c060, #d4a84b, #b8922a, #d4a84b, #f0c060)",
+            backgroundSize: "300% 300%",
+            animation: "ctaBreathe 3s ease-in-out infinite",
+            marginRight: "-60px",
+            position: "relative",
+            overflow: "hidden",
           }}
         >
-          Start a Project
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-            <path d="M5 12h14M12 5l7 7-7 7" />
-          </svg>
+          {/* Gloss overlay — top half highlight */}
+          <span style={{
+            position: "absolute",
+            top: 0, left: 0, right: 0,
+            height: "50%",
+            background: "linear-gradient(180deg, rgba(255,255,255,0.28) 0%, rgba(255,255,255,0.04) 100%)",
+            borderRadius: "0.5rem 0.5rem 0 0",
+            pointerEvents: "none",
+          }} />
+          {/* Gloss shimmer line */}
+          <span style={{
+            position: "absolute",
+            top: "1px", left: "8%", right: "8%",
+            height: "1px",
+            background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent)",
+            pointerEvents: "none",
+          }} />
+          <span style={{ position: "relative", zIndex: 1, display: "inline-flex", alignItems: "center", gap: "0.5rem" }}>
+            Start a Project
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </span>
         </Link>
       </div>
     </header>
+    </>
   );
 }
