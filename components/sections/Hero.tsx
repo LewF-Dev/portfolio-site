@@ -31,10 +31,10 @@ export default function Hero() {
           </p>
 
           <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginTop: "0.5rem" }}>
-            <a href="#contact" style={{ background: "#c9a84c", color: "#0d0d0f", padding: "0.875rem 2rem", borderRadius: "0.5rem", fontSize: "0.9rem", fontWeight: 600, textDecoration: "none", fontFamily: "var(--font-inter), system-ui, sans-serif" }}>
+            <a href="/contact" style={{ background: "linear-gradient(135deg, #d4a84b 0%, #c9a84c 50%, #b8922a 100%)", color: "#0d0d0f", padding: "0.875rem 2rem", borderRadius: "0.5rem", fontSize: "0.9rem", fontWeight: 600, textDecoration: "none", fontFamily: "var(--font-inter), system-ui, sans-serif", boxShadow: "0 4px 16px rgba(201,168,76,0.3)" }}>
               Start a Project
             </a>
-            <a href="#work" style={{ background: "transparent", color: "#f0f0f0", padding: "0.875rem 2rem", borderRadius: "0.5rem", fontSize: "0.9rem", fontWeight: 500, textDecoration: "none", border: "1px solid rgba(255,255,255,0.2)", fontFamily: "var(--font-inter), system-ui, sans-serif" }}>
+            <a href="/work" style={{ background: "transparent", color: "#f0f0f0", padding: "0.875rem 2rem", borderRadius: "0.5rem", fontSize: "0.9rem", fontWeight: 500, textDecoration: "none", border: "1px solid rgba(255,255,255,0.15)", fontFamily: "var(--font-inter), system-ui, sans-serif" }}>
               See the Work
             </a>
           </div>
