@@ -126,12 +126,12 @@ export default function Navigation() {
             textDecoration: "none",
             color: "#1a0e00",
             // Glass base — translucent amber
-            background: "linear-gradient(135deg, rgba(240,192,80,0.55) 0%, rgba(212,148,30,0.48) 40%, rgba(240,180,60,0.52) 70%, rgba(212,168,75,0.50) 100%)",
+            background: "linear-gradient(135deg, rgba(255,210,90,0.82) 0%, rgba(220,160,35,0.75) 40%, rgba(250,195,70,0.80) 70%, rgba(230,178,60,0.78) 100%)",
             backgroundSize: "300% 300%",
             backdropFilter: "blur(16px) saturate(180%)",
             WebkitBackdropFilter: "blur(16px) saturate(180%)",
-            border: "1px solid rgba(255,210,90,0.3)",
-            boxShadow: "0 1px 0 rgba(255,255,255,0.12) inset, 0 -1px 0 rgba(100,60,0,0.15) inset, 0 4px 20px rgba(184,140,40,0.12)",
+            border: "1px solid rgba(255,220,100,0.5)",
+            boxShadow: "0 1px 0 rgba(255,255,255,0.2) inset, 0 -1px 0 rgba(100,60,0,0.2) inset, 0 4px 24px rgba(212,168,40,0.22)",
             animation: "ctaFlow 8s ease-in-out infinite",
             marginRight: "-60px",
             position: "relative",
@@ -144,16 +144,16 @@ export default function Navigation() {
             position: "absolute",
             top: 0, left: 0, right: 0,
             height: "55%",
-            background: "linear-gradient(180deg, rgba(255,255,255,0.16) 0%, rgba(255,255,255,0.02) 100%)",
+            background: "linear-gradient(180deg, rgba(255,255,255,0.26) 0%, rgba(255,255,255,0.03) 100%)",
             borderRadius: "0.6rem 0.6rem 60% 60% / 0.6rem 0.6rem 12px 12px",
             pointerEvents: "none",
           }} />
-          {/* Shimmer line — very soft, fades at edges */}
+          {/* Shimmer line — soft, fades at edges */}
           <span style={{
             position: "absolute",
             top: "1px", left: "20%", right: "20%",
             height: "1px",
-            background: "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.35) 50%, transparent 100%)",
+            background: "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.5) 50%, transparent 100%)",
             pointerEvents: "none",
           }} />
           {/* Bottom depth — very gentle */}
