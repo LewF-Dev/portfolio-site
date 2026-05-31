@@ -99,7 +99,7 @@ export default function Work() {
           <div style={{ borderRadius: "1.25rem", border: "1px solid rgba(255,255,255,0.07)", background: "#0d0d0f", overflow: "hidden" }}>
 
             {/* Screenshot */}
-            <div style={{ position: "relative", height: "28rem", overflow: "hidden", background: "#0a0a0f" }}>
+            <div style={{ position: "relative", paddingBottom: "56.25%", overflow: "hidden", background: "#0a0a0f" }}>
               <AnimatePresence mode="wait" custom={dir}>
                 <motion.div
                   key={p.id}
@@ -113,9 +113,9 @@ export default function Work() {
                   animate="center"
                   exit="exit"
                   transition={{ duration: 0.4, ease }}
-                  style={{ position: "absolute", inset: 0 }}
+                  style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}
                 >
-                  <img src={p.img} alt={p.name} style={{ width: "100%", height: "100%", objectFit: "contain", objectPosition: "center", display: "block", background: "#0a0a0f" }} />
+                  <img src={p.img} alt={p.name} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", display: "block" }} />
                 </motion.div>
               </AnimatePresence>
 
