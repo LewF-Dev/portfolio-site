@@ -99,7 +99,12 @@ export default function Work() {
           <div style={{ borderRadius: "1.25rem", border: "1px solid rgba(255,255,255,0.07)", background: "#0d0d0f", overflow: "hidden" }}>
 
             {/* Screenshot */}
-            <div style={{ position: "relative", paddingBottom: "56.25%", overflow: "hidden", background: "#0a0a0f" }}>
+            <a
+              href={p.href ?? undefined}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ display: "block", position: "relative", paddingBottom: "56.25%", overflow: "hidden", background: "#0a0a0f", cursor: p.href ? "pointer" : "default", textDecoration: "none" }}
+            >
               <AnimatePresence mode="wait" custom={dir}>
                 <motion.div
                   key={p.id}
@@ -128,7 +133,19 @@ export default function Work() {
               <div style={{ position: "absolute", top: "1rem", right: "1rem", zIndex: 2, background: "rgba(13,13,15,0.7)", backdropFilter: "blur(6px)", borderRadius: "2rem", padding: "0.3rem 0.85rem", border: "1px solid rgba(255,255,255,0.08)" }}>
                 <span style={{ fontSize: "0.7rem", color: "#a0a0b0", fontFamily: "monospace" }}>{p.url}</span>
               </div>
-            </div>
+              {/* Hover overlay */}
+              {p.href && (
+                <div style={{ position: "absolute", inset: 0, zIndex: 1, display: "flex", alignItems: "center", justifyContent: "center", opacity: 0, transition: "opacity 0.2s, background 0.2s" }}
+                  onMouseEnter={e => { (e.currentTarget as HTMLDivElement).style.opacity = "1"; (e.currentTarget as HTMLDivElement).style.background = "rgba(13,13,15,0.45)"; }}
+                  onMouseLeave={e => { (e.currentTarget as HTMLDivElement).style.opacity = "0"; (e.currentTarget as HTMLDivElement).style.background = "transparent"; }}
+                >
+                  <span style={{ color: "#f0f0f0", fontSize: "0.875rem", fontWeight: 500, background: "rgba(13,13,15,0.85)", padding: "0.5rem 1.25rem", borderRadius: "2rem", border: "1px solid rgba(255,255,255,0.12)", display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /><polyline points="15 3 21 3 21 9" /><line x1="10" y1="14" x2="21" y2="3" /></svg>
+                    Visit site
+                  </span>
+                </div>
+              )}
+            </a>
 
             {/* Info */}
             <div style={{ padding: "1.75rem 2rem 2rem", display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "2rem", minHeight: "9rem" }}>
@@ -138,12 +155,6 @@ export default function Work() {
                     <p style={{ fontSize: "0.7rem", color: "#606070", letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "0.5rem" }}>{p.category}</p>
                     <h3 style={{ fontSize: "1.4rem", fontWeight: 700, color: "#f0f0f0", fontFamily: "var(--font-syne), system-ui, sans-serif", marginBottom: "0.6rem" }}>{p.name}</h3>
                     <p style={{ color: "#a0a0b0", fontSize: "0.875rem", lineHeight: 1.7 }}>{p.description}</p>
-                    {p.href && (
-                      <a href={p.href} target="_blank" rel="noopener noreferrer" style={{ display: "inline-flex", alignItems: "center", gap: "0.35rem", marginTop: "1rem", color: "#4a7fa5", fontSize: "0.8rem", textDecoration: "none" }}>
-                        Visit site
-                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /><polyline points="15 3 21 3 21 9" /><line x1="10" y1="14" x2="21" y2="3" /></svg>
-                      </a>
-                    )}
                   </motion.div>
                 </AnimatePresence>
               </div>
