@@ -126,43 +126,42 @@ export default function Navigation() {
             textDecoration: "none",
             color: "#1a0e00",
             // Glass base — translucent amber
-            background: "linear-gradient(135deg, rgba(240,192,80,0.82) 0%, rgba(212,148,30,0.75) 40%, rgba(240,180,60,0.80) 70%, rgba(212,168,75,0.78) 100%)",
+            background: "linear-gradient(135deg, rgba(240,192,80,0.55) 0%, rgba(212,148,30,0.48) 40%, rgba(240,180,60,0.52) 70%, rgba(212,168,75,0.50) 100%)",
             backgroundSize: "300% 300%",
-            backdropFilter: "blur(12px) saturate(160%)",
-            WebkitBackdropFilter: "blur(12px) saturate(160%)",
-            // Layered border: bright top edge + subtle outer ring
-            border: "1px solid rgba(255,220,100,0.45)",
-            outline: "1px solid rgba(180,120,20,0.2)",
-            outlineOffset: "1px",
+            backdropFilter: "blur(16px) saturate(180%)",
+            WebkitBackdropFilter: "blur(16px) saturate(180%)",
+            border: "1px solid rgba(255,210,90,0.3)",
+            boxShadow: "0 1px 0 rgba(255,255,255,0.12) inset, 0 -1px 0 rgba(100,60,0,0.15) inset, 0 4px 20px rgba(184,140,40,0.12)",
             animation: "ctaFlow 8s ease-in-out infinite",
             marginRight: "-60px",
             position: "relative",
             overflow: "hidden",
+            fontFamily: "var(--font-space-grotesk), 'Space Grotesk', sans-serif",
           }}
         >
-          {/* Top-half gloss — convex glass highlight */}
+          {/* Top-half gloss — soft diffused highlight */}
           <span style={{
             position: "absolute",
             top: 0, left: 0, right: 0,
-            height: "52%",
-            background: "linear-gradient(180deg, rgba(255,255,255,0.32) 0%, rgba(255,255,255,0.06) 100%)",
-            borderRadius: "0.6rem 0.6rem 40% 40% / 0.6rem 0.6rem 20px 20px",
+            height: "55%",
+            background: "linear-gradient(180deg, rgba(255,255,255,0.16) 0%, rgba(255,255,255,0.02) 100%)",
+            borderRadius: "0.6rem 0.6rem 60% 60% / 0.6rem 0.6rem 12px 12px",
             pointerEvents: "none",
           }} />
-          {/* Inner shimmer line just below top edge */}
+          {/* Shimmer line — very soft, fades at edges */}
           <span style={{
             position: "absolute",
-            top: "1px", left: "12%", right: "12%",
+            top: "1px", left: "20%", right: "20%",
             height: "1px",
-            background: "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.7) 40%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.7) 60%, transparent 100%)",
+            background: "linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.35) 50%, transparent 100%)",
             pointerEvents: "none",
           }} />
-          {/* Bottom inner shadow — depth */}
+          {/* Bottom depth — very gentle */}
           <span style={{
             position: "absolute",
             bottom: 0, left: 0, right: 0,
-            height: "35%",
-            background: "linear-gradient(0deg, rgba(120,70,0,0.18) 0%, transparent 100%)",
+            height: "30%",
+            background: "linear-gradient(0deg, rgba(80,40,0,0.1) 0%, transparent 100%)",
             pointerEvents: "none",
           }} />
           <span style={{ position: "relative", zIndex: 1, display: "inline-flex", alignItems: "center", gap: "0.5rem" }}>
