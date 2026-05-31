@@ -47,7 +47,7 @@ export default function Navigation() {
             <img
               src="/images/mordax-labs-logo.png"
               alt="Mordax Labs"
-              style={{ height: "4.75rem", width: "auto", objectFit: "contain", display: "block" }}
+              style={{ height: "4.75rem", width: "auto", objectFit: "contain", display: "block", marginBottom: "10px" }}
             />
           </Link>
 
