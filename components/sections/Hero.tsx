@@ -64,10 +64,11 @@ export default function Hero() {
           </div>
 
           <h1 style={{ fontFamily: "var(--font-syne), system-ui, sans-serif", fontSize: "clamp(2.25rem, 5.5vw, 4rem)", fontWeight: 700, color: "#f0f0f0", lineHeight: 1.05, letterSpacing: "-0.02em", maxWidth: "52rem", textAlign: "center", animation: "fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.55s both" }}>
-            Custom websites.{" "}
-            <span style={{ color: "#4a7fa5" }}>Built properly.</span>
+            Custom websites.
             <br />
-            <span style={{ color: "#c9a84c" }}>Priced fairly.</span>
+            <span style={{ color: "#4a7fa5", whiteSpace: "nowrap" }}>Built properly.</span>
+            <br />
+            <span style={{ color: "#c9a84c", whiteSpace: "nowrap" }}>Priced fairly.</span>
           </h1>
 
           <p style={{ color: "#a0a0b0", fontSize: "1.1rem", maxWidth: "36rem", lineHeight: 1.7, textAlign: "center", animation: "fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.7s both" }}>
