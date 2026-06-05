@@ -64,15 +64,14 @@ export default function Hero() {
           </div>
 
           <h1 style={{ fontFamily: "var(--font-syne), system-ui, sans-serif", fontSize: "clamp(2.25rem, 5.5vw, 4rem)", fontWeight: 700, color: "#f0f0f0", lineHeight: 1.05, letterSpacing: "-0.02em", maxWidth: "52rem", textAlign: "center", animation: "fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.55s both" }}>
-            Your site.{" "}
-            <span style={{ color: "#4a7fa5" }}>Built right.</span>
+            Custom websites.{" "}
+            <span style={{ color: "#4a7fa5" }}>Built properly.</span>
             <br />
-            <span style={{ color: "#c9a84c" }}>Built to last.</span>
+            <span style={{ color: "#c9a84c" }}>Priced fairly.</span>
           </h1>
 
           <p style={{ color: "#a0a0b0", fontSize: "1.1rem", maxWidth: "36rem", lineHeight: 1.7, textAlign: "center", animation: "fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.7s both" }}>
-            Mordax Labs designs and builds custom websites for businesses that
-            want to stand out — with a companion app so you stay in control after launch.
+            No page builders, no templates, no bloat. Just clean, fast, custom-built websites for businesses that want to stand out — with honest pricing and a process that actually makes sense.
           </p>
 
           <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginTop: "0.5rem", animation: "fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.85s both" }}>
