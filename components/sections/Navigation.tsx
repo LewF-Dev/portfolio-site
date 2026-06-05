@@ -15,7 +15,6 @@ const breatheKeyframes = `
 const navLinks = [
   { label: "Work", href: "/work" },
   { label: "Process", href: "/how-it-works" },
-  { label: "Templates", href: "/templates" },
   { label: "Contact", href: "/contact" },
 ];
 
